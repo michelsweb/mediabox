@@ -4,7 +4,7 @@ class MediaBox {
    * @param params
    * @returns {MediaBox|boolean}
    */
-  constructor(element, params = 0) {
+  constructor(element, params = {}) {
     const default_params = { autoplay: '1' };
     this.params = { ...default_params, ...params }
     this.selector = element instanceof NodeList ? [...element] : [...document.querySelectorAll(element)];
